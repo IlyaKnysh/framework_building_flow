@@ -7,7 +7,7 @@ from steps import login_steps
 
 
 @pytest.fixture
-def open_site():
+def authorize():
     browser = driver.create_browser()
     driver.set_shared_driver(browser)
     browser.get(BASE_URL)

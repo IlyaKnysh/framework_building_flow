@@ -7,7 +7,7 @@ from steps import main_steps, item_steps
 @pytest.mark.parametrize('item_name', [
     'Sauce Labs Backpack',
 ])
-@pytest.mark.usefixtures('open_site')
+@pytest.mark.usefixtures('authorize')
 def test_auth(item_name):
     main_page_price = main_steps.get_item_price(item_name)
     main_steps.open_item(item_name)
